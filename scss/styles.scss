@@ -1,3 +1,5 @@
+$leftpadding :0;
+$rightpadding :0;
 * {
     box-sizing: border-box;
 }
@@ -30,32 +32,29 @@ img.bg {
   top: 0;
   left: 0;
 }
-
-@media screen and (max-width: 1024px) { /* Specific to this particular image */
-  img.bg {
-    left: 50%;
+.imgdislay img {
+    height: 45px;
+    width: 40px;
   }
-}
-
-.imgdislay img
-{   
-   height:45px;
-   width:40px;
-}
-p.lastText{
-    font-style: oblique;
-    font-size: 12px;
-}
-
 .carousel-inner img{
     width: 60%;
     height: 60%;
     align-content: center;
 }
-
-.footercs
-{
-    margin-bottom:0;
-    background-color:darkgrey;
-    border-radius:10%;
+.sticky-top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    padding-left: $leftpadding;
+    padding-right: $rightpadding;
 }
+footer {
+    margin-bottom: 0;
+    background-color: darkgrey;
+    border-radius: 10%;
+  }
+  p.lastText {
+    font-style: oblique;
+    font-size: 12px;
+  }
